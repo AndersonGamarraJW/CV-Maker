@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import { v4 as uuid } from "uuid";
-import { getKeyByIndex } from "./utils";
+import { getKeyByIndex, nextDisplay, prevDisplay } from "./utils";
 import NavBar from "./components/NavBar";
 import ContactComponent from "./components/ContactComponent";
 import SectionFieldContainer from "./components/SectionFieldContainer";
 import EducationComponent from "./components/EducationComponent";
 import ExperienceComponent from "./components/ExperienceComponent";
 import SkillsComponent from "./components/SkillsComponent";
+import Button from "./components/Button";
 function App() {
   const navItems = [
     { id: uuid(), index: "1", text: "Contact" },
@@ -36,9 +37,28 @@ function App() {
         ></NavBar>
       </header>
       <main>
-        <SectionFieldContainer>
-          {currentDisplayShow.component}
-        </SectionFieldContainer>
+        <div>
+          <SectionFieldContainer>
+            {currentDisplayShow.component}
+          </SectionFieldContainer>
+          <div className="btns-container">
+            <Button
+              setDisplay={() =>
+                setDispleyShow(prevDisplay(displays, currentDisplayShow))
+              }
+            >
+              Back
+            </Button>
+            <Button
+              setDisplay={() =>
+                setDispleyShow(nextDisplay(displays, currentDisplayShow))
+              }
+            >
+              Next
+            </Button>
+          </div>
+        </div>
+        <div></div>
       </main>
     </>
   );
