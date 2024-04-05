@@ -1,0 +1,37 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.square {
+  background: #ececed;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-content: center;
+}
+.square > p {
+  font-weight: 500;
+}
+.square.active {
+  background-color: #f5eacf;
+}
+.nav-item {
+  color: #8d8d8d;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+
+  font-weight: 500;
+}
+.nav-item.active {
+  color: #453d57;
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  column-gap: 1rem;
+  justify-content: space-evenly;
+}

@@ -7,6 +7,7 @@ function App() {
     { id: uuid(), number: "1", text: "Contact" },
     { id: uuid(), number: "2", text: "Education" },
     { id: uuid(), number: "3", text: "Experience" },
+    { id: uuid(), number: "4", text: "Skills" },
   ];
   return <NavBar navItems={navItems}></NavBar>;
 }

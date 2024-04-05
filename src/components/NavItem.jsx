@@ -1,9 +1,10 @@
 import Square from "./Square";
-const NavItem = ({ number, text, isActive }) => {
+import "../styles/nav-bar.css";
+const NavItem = ({ number, text, isActive, onShow }) => {
   const styleActive = isActive ? "active" : "";
   return (
-    <li className={`nav-item ${styleActive}`}>
-      <Square text={number} isActive={true}></Square>
+    <li className={`nav-item ${styleActive}`} onClick={onShow}>
+      <Square text={number} isActive={isActive}></Square>
       <p>{text}</p>
     </li>
   );

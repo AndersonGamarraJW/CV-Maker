@@ -1,3 +1,4 @@
+import "../styles/nav-bar.css";
 const Square = ({ text, isActive }) => {
   const styleActive = isActive ? "active" : "";
   return (
