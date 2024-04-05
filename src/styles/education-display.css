@@ -1,0 +1,18 @@
+.education-field-container {
+  display: flex;
+  column-gap: 1rem;
+}
+.education-field-container > div:nth-child(1) {
+  flex-basis: 0;
+  flex-grow: 3;
+}
+.education-field-container > div:nth-child(2) {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.educations-fields-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 80%;
+}

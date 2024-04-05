@@ -1,20 +1,17 @@
 import { useState } from "react";
 import "../styles/nav-bar.css";
 import NavItem from "./NavItem";
-const NavBar = ({ navItems }) => {
-  const [activeBtn, setActiveBtn] = useState(0);
+const NavBar = ({ navItems, currentIndexBtn, setDisplayShow }) => {
   return (
     <ul className="nav-bar">
       {navItems.map((navItem) => {
         return (
           <NavItem
             key={navItem.id}
-            number={navItem.number}
+            index={navItem.index}
             text={navItem.text}
-            isActive={activeBtn === navItem.number}
-            onShow={() => {
-              setActiveBtn(navItem.number);
-            }}
+            isActive={currentIndexBtn === navItem.index}
+            onShow={() => setDisplayShow(navItem.index)}
           ></NavItem>
         );
       })}

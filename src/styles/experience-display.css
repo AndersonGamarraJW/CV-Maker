@@ -1,0 +1,22 @@
+.enterprise-info-container {
+  display: flex;
+  column-gap: 1rem;
+}
+.enterprise-info-container > div {
+  flex-basis: 0;
+}
+.enterprise-info-container > div:nth-child(1) {
+  flex-grow: 3;
+}
+.enterprise-info-container > div:nth-child(2) {
+  flex-grow: 2;
+}
+.enterprise-info-container > div:nth-child(3) {
+  min-width: 0;
+  flex-grow: 1;
+}
+.experience-field-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
