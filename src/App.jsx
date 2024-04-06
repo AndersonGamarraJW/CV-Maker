@@ -9,22 +9,30 @@ import EducationComponent from "./components/EducationComponent";
 import ExperienceComponent from "./components/ExperienceComponent";
 import SkillsComponent from "./components/SkillsComponent";
 import Button from "./components/Button";
+import PersonInfo from "./personInfo";
+import emptyPerson from "./emptyPersonInfo.json";
+import Preview from "./components/Preview";
 function App() {
+  const [infoPerson, setInfoPerson] = useState(new PersonInfo(emptyPerson));
   const navItems = [
     { id: uuid(), index: "1", text: "Contact" },
     { id: uuid(), index: "2", text: "Education" },
     { id: uuid(), index: "3", text: "Experience" },
     { id: uuid(), index: "4", text: "Skills" },
   ];
+
   const displays = {
-    contact: { index: "1", component: <ContactComponent /> },
+    contact: {
+      index: "1",
+      component: (
+        <ContactComponent person={infoPerson} updatePerson={setInfoPerson} />
+      ),
+    },
     education: { index: "2", component: <EducationComponent /> },
     experience: { index: "3", component: <ExperienceComponent /> },
     skills: { index: "4", component: <SkillsComponent /> },
   };
-
   const [currentDisplayShow, setDispleyShow] = useState(displays.contact);
-
   return (
     <>
       <header>
@@ -58,7 +66,9 @@ function App() {
             </Button>
           </div>
         </div>
-        <div></div>
+        <div>
+          <Preview personInfo={infoPerson}></Preview>
+        </div>
       </main>
     </>
   );

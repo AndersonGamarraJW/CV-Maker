@@ -1,7 +1,7 @@
 import "../styles/contact-display.css";
 import InformationFieldContainer from "./InformationFieldContainer";
 import InputFieldItem from "./InputFieldItem";
-const ContactComponent = () => {
+const ContactComponent = ({ person, updatePerson }) => {
   const contactInfo = {
     title: "Contact Information",
     description: "This information will be on placed on the top of your cv",
@@ -18,11 +18,15 @@ const ContactComponent = () => {
             labelText={"First Name"}
             typeInput={"text"}
             idName={"first-name"}
+            updateInfo={(value) => updatePerson(person.setName(value))}
+            value={person.name}
           />
           <InputFieldItem
             labelText={"Last Name"}
             typeInput={"text"}
             idName={"last-name"}
+            updateInfo={(value) => updatePerson(person.setLastName(value))}
+            value={person.lastName}
           />
         </div>
         <InputFieldItem

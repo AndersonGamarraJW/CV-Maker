@@ -1,0 +1,35 @@
+{
+  "nameInfo": {
+    "name": "",
+    "lastName": ""
+  },
+  "contactInfo": {
+    "phone": "",
+    "email": "",
+    "address": ""
+  },
+  "abutePerson": "",
+  "experience": {
+    "1": {
+      "companyName": "",
+      "year": "",
+      "jobPosition": "",
+      "responsibilities": ""
+    }
+  },
+  "education": {
+    "1": {
+      "year": "",
+      "universityName": "",
+      "description": ""
+    }
+  },
+  "skills": {
+    "hardSkills": {
+      "1": ""
+    },
+    "softSkills": {
+      "1": ""
+    }
+  }
+}
