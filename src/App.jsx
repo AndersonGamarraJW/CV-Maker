@@ -32,7 +32,6 @@ function App() {
     experience: { index: "3", component: <ExperienceComponent /> },
     skills: { index: "4", component: <SkillsComponent /> },
   };
-  const [currentDisplayShow, setDispleyShow] = useState(displays.contact);
   return (
     <>
       <header>
